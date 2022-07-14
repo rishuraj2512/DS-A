@@ -1,0 +1,42 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		
+        
+        int[]arr={10,20,30,40,50};
+        
+        int d=32;
+
+        int low=0;
+
+        int high=arr.length-1;
+        int ceil=0;
+        int floor=0;
+        while(low<=high){
+            int mid=(low+high)/2;
+
+            if(arr[mid]<d){
+               low=mid+1;
+               floor=arr[mid];      
+            }
+
+            else if(arr[mid]>d){
+               high=mid-1;
+               ceil=arr[mid];
+            }
+
+            else{
+                 ceil=floor=arr[mid];
+                 break;
+            }
+        }
+        System.out.println(ceil);
+        System.out.println(floor);
+	}
+}
