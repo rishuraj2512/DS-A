@@ -1,0 +1,60 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner scn=new Scanner(System.in);
+        int n=scn.nextInt();
+        int m=scn.nextInt();
+        int arr1[][]=new int[n][m];
+
+        for(int i=0;i<arr1.length;i++){
+            for(int j=0;j<arr1[i].length;j++){
+                arr1[i][j]=scn.nextInt();
+            }
+        }
+
+        
+      
+
+       for(int i=0;i<m;i++){
+            if(i%2==0){
+                 for(int j=0;j<n;j++){
+                     System.out.println(arr1[j][i]);
+                 }
+            }
+
+            else{
+                    for(int j=n-1;j>=0;j--){
+                     System.out.println(arr1[j][i]);
+                 }
+            }
+            System.out.println();
+        }
+
+
+
+
+       
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+}
